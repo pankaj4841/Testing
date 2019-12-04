@@ -1,0 +1,847 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+
+    <link rel="icon" type="image/png" href="./cgnew/img/cableguy.png" />
+
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./cgnew/css/style.css">
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+
+
+    <!-- 
+  PR
+  Created On -2nd September 2019
+-->
+    <title>CableGuy</title>
+    <style type="text/css">
+        html,
+        body,
+        section,
+        #cf,
+        #r {
+            height: 100%;
+
+        }
+
+        #captcha {
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        #forgotPaswrdBtn a:hover {
+            color: #8252fa !important;
+        }
+
+        #copyrights a:hover {
+            color: #8252fa !important;
+        }
+
+        #left {
+            height: 100%;
+            position: relative;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            background-color: #8252fa;        
+            background: -webkit-linear-gradient(45deg, #8252fa, #eca2f1);
+            background: -o-linear-gradient(45deg, #8252fa, #eca2f1);
+            background: -moz-linear-gradient(45deg, #8252fa, #eca2f1);
+            background: linear-gradient(45deg, #8252fa, #eca2f1);
+            
+/*  background-repeat: no-repeat;*/
+/*
+ background-image:
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+        url('cgnew/img/cyberspace.jpg');*/
+        }
+
+        #right {
+            position: relative;
+            height: 100%;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+
+        }
+
+        #cglogo {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            height: 50px;
+            padding: 10px;
+            display: none;
+        }
+
+        #vendorimage {
+            height: 65px;
+            text-align: center;
+            left: 0;
+            right: 0;
+            margin: 20px;
+            padding: 5px;
+        }
+
+        #bottom {
+            position: absolute;
+            bottom: 0px;
+            left: 10px;
+            right: 10px;
+            text-align: center;
+        }
+
+        .group {
+            position: relative;
+            margin-bottom: 15px;
+        }
+
+        input {
+            font-size: 15px;
+            padding: 10px 10px 10px 10px;
+            width: 250px;
+            border: none;
+            border-bottom: 1px solid #757575;
+            font-family: sans-serif;
+            font-weight: 600;
+            color: #777777;
+        }
+
+        input:focus {
+            outline: none;
+            border-bottom: 2px solid #8252fa;
+
+        }
+
+        .carousel-indicators li {
+            width: 15px;
+            height: 15px;
+            border-radius: 100%;
+        }
+
+        #topbottom {
+            display: none;
+        }
+
+
+        @media only screen and (max-width: 500px) {
+            #cglogo {
+                display: none;
+            }
+
+            #left {
+                display: none;
+            }
+
+            #bottom {
+                display: none;
+            }
+
+            #topbottom {
+                margin-top: 20px;
+                display: block;
+            }
+
+            html,
+            body,
+            section,
+            #cf,
+            #r {
+                height: 100%;
+            }
+
+            #left {
+                height: auto;
+                /* position: absolute;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    text-align: center; */
+            }
+
+            #right {
+                height: auto;
+            }
+        }
+        @media only screen and (max-height: 600px) {
+        
+
+            #bottom {
+                display: none;
+            }
+
+            #topbottom {
+                margin-top: 20px;
+                display: block;
+            }
+
+        }
+
+        input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+}
+    </style>
+</head>
+
+<body onload="Captcha();">
+    <section>
+
+        <div class="container-fluid" id="cf">
+            <div class="row" id="r">
+                <div class="col-md-6" id="left">
+                        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel"
+                        data-interval="3000">
+
+                        <marquee>
+                            <h3 style="color: white;font-family: sans-serif;font-weight: 600;">Welcome To CableGuy</h3>
+                        </marquee>
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                             <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img class="d-block w-100 img-fluid" style="padding: 50px;"
+                                    src="./cgnew/img/cgnewwebdashboard.png" alt="First slide">
+                                <div class="carousel-caption d-none d-md-block"
+                                    style="position: relative;left: auto;right: auto;top:-20px;bottom: auto;">
+                                    <h3 style="color: white;font-family: sans-serif;font-weight: 600;">Subscriber Management System (SMS)</h3>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100 img-fluid" style="padding: 50px;"
+                                    src="./cgnew/img/cgwebscreentemplate.png" alt="Third slide">
+                                <div class="carousel-caption d-none d-md-block"
+                                    style="position: relative;left: auto;right: auto;top:-20px;bottom: auto;">
+                                    <h3 style="color: white;font-family: sans-serif;font-weight: 600;">Financial, Broadcaster, Daily and Audit
+                                        Related Reports </h3>
+                                </div>
+                            </div>
+                             <div class="carousel-item">
+                                <img class="d-block w-100 img-fluid" style="padding: 50px;"
+                                    src="./cgnew/img/cgnewbelgaumpack.png" alt="Third slide">
+                                <div class="carousel-caption d-none d-md-block"
+                                    style="position: relative;left: auto;right: auto;top:-20px;bottom: auto;">
+                                  <h3 style="color: white;font-weight: 600;font-family: sans-serif;">Pack Management</h3>
+
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100 img-fluid" style="padding: 50px;" src="./cgnew/img/newapp.png"
+                                    alt="Fourth slide">
+                                <div class="carousel-caption d-none d-md-block"
+                                    style="position: relative;left: auto;right: auto;top:-20px;bottom: auto;">
+                                    <h3 style="color: white;font-family: sans-serif;font-weight: 600;">LCO Collection & Customer Self Care
+                                        Application </h3>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div style="margin-top: 30px;">
+                            <!--   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a> -->
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-6" id="right">
+                <img src="./cgnew/img/cableguy.png" class="img-fluid" id="cglogo">
+                    <form id="formmain" class="contact_form" role="form" method="post" onsubmit="return Submitt();">
+                        <img src="./cgnew/img/cableguy.png" class="img-fluid" id="vendorimage">
+
+
+                        <div class="group" style="left: 0;right: 0;text-align: center;">
+
+                            <i class="fa fa-user fa-2x" aria-hidden="true" style="left: 0;right: 0;color:black;"></i>
+
+
+
+                            <input type="text" placeholder="Username" name="id" id="id" value="" autocomplete="off">
+
+                        </div>
+                        <br>
+
+                        <div class="group" style="left: 0;right: 0;text-align: center;">
+
+                            <i class="fa fa-lock fa-2x" aria-hidden="true" style="left: 0;right: 0;color:black;"></i>
+                            <input type="password" placeholder="Password" name="pass" id="pass" value="" autocomplete="off">
+                        </div>
+                        <div style="left: 0;right:0;text-align: center;display: inline-flex;">
+                               <strike style="color:black;font-family: sans-serif;font-weight: 600;"> <p style="font-size: 15px;margin-top: 15px;font-weight: bold;" id="captcha">C A T V</p>
+                               </strike> <i
+                                class="fa fa-refresh fa-2x" aria-hidden="true"
+                                style="margin-left: 15px;margin-top: 10px;color:black;" onclick="Captcha();"></i>
+                        </div>
+                        <div class="group" style="left: 0;right: 0;text-align: center;">
+
+                            <i class="fa fa-arrow-up fa-2x" aria-hidden="true" style="left: 0;right: 0;color:black;"></i>
+                            <input type="text" placeholder="Enter Captcha" name="incaptcha" id="incaptcha"
+                                autocomplete="off">
+
+
+                        </div>
+
+                        <button type="submit" id="loginbutton" value="submit" class="primary_btn"
+                            style="width: 250px;left: 0;right: 0;text-align: center;"><span
+                                style="font-size: 15px;">Login</span></button>
+
+
+                        <p style="margin-top: 10px;font-size: 15px;text-align: center;" id="forgotPaswrdBtn"> <a
+                                href="#" onclick="showotp();" style="color: inherit;font-family: sans-serif;font-weight: 600;">Forgot Password ?</a></p>
+                        <div class="topbottom" id="topbottom">
+                            <p id="copyrights"><a href="https://www.cableguy.in"
+                                    style="color: inherit;font-size: 15px;font-family: sans-serif;font-weight: 600;">Copyrights @ 2019 CableGuy | All Rights
+                                    Reserved | Version 2.0</a></p>
+                        </div>
+                    </form>
+                    <div class="bottom" id="bottom">
+                        <p id="copyrights"><a href="https://www.cableguy.in"
+                                style="color: inherit;font-size: 15px;font-family: sans-serif;font-weight: 600;">Copyrights @ 2019 CableGuy | All Rights Reserved
+                                | Version 2.0</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="modal fade" id="verification_form" role="dialog" data-backdrop="static" data-keyboard="false"
+            style="text-align: center;">
+
+            <div class="modal-dialog modal-sm">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header" style="width:auto;height: auto;text-align: center;justify-content: center;align-content: center;align-items: center;">
+                        <h4 class="modal-title" id="successtile" style="color:black;">USER VERIFICATION FORM</h4>
+                    </div>
+              <br>
+
+                    <form action="forgot_password_otp_generate" name="forgot_password_otp_generate" method="post">
+
+                        <div class="form-group row" style="width:auto;height: auto;text-align: center;justify-content: center;align-content: center;align-items: center;padding: 10px;">
+                            <div class="col-md-4">
+                                <span id="">Login Id </span>
+                            </div>
+                            <div class="col-md-7">
+                                <input type="text" class="form-control" name="login_id" id="login_id" required>
+                            </div>
+                        </div>
+                        <div class="form-group row" style="width:auto;height: auto;text-align: center;justify-content: center;align-content: center;align-items: center;padding: 10px;">
+                            <div class="col-md-4">
+                                <span id="">Mobile</span>
+                            </div>
+                            <div class="col-md-7">
+                                <input type="text" maxlength="10" class="form-control" id="mobile" name="mobile"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="form-group row" style="width:auto;height: auto;text-align: center;justify-content: center;align-content: center;align-items: center;padding: 10px;">
+                            <div class="col-md-4">
+                                <span id="">Email Id</span>
+                            </div>
+                            <div class="col-md-7">
+                                <input type="text" class="form-control" id="email" name="email" required>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" data-dismiss="modal" onclick="resetForm('verification_form')"
+                                class="btn btn-danger" value="Cancel">Cancel</button>
+                            <button type="submit" onclick="resetForm('verification_form')"
+                                class="btn btn-success">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="modal fade" id="new_password_form" role="dialog" data-backdrop="static" data-keyboard="false">
+            <div class="modal-dialog modal-sm">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header" style="width:auto;height: auto;text-align: center;justify-content: center;align-content: center;align-items: center;">
+                        <h4 class="modal-title" id="successtile" style="color:black;">ENTER PASSWORD</h4>
+                    </div>
+                    <br>
+
+                    <form action="forgot_password_set_password" name="forgot_password_set_password" method="post">
+
+                        <input type="hidden" class="form-control" name="login_Id" id="login_Id">
+                        <div class="form-group row" style="width:auto;height: auto;text-align: center;justify-content: center;align-content: center;align-items: center;padding: 10px;">
+                            <div class="col-md-6">
+                                <span id="">New Password</span>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" id="newPassword" name="newPassword" required="">
+                            </div>
+                        </div>
+                        <div class="form-group row" style="width:auto;height: auto;text-align: center;justify-content: center;align-content: center;align-items: center;padding: 10px;">
+                            <div class="col-md-6">
+                                <span id="">Confirmed Password</span>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" id="confPassword" name="confPassword"
+                                    required="">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" data-dismiss="modal" onclick="resetForm('verification_form')"
+                                class="btn btn-danger" value="Cancel"> Cancel </button>
+                            <button type="submit" onclick="resetForm('verification_form')"
+                                class="btn btn-success">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="modal fade" id="otpDialog" role="dialog" data-backdrop="static" data-keyboard="false">
+            <div class="modal-dialog modal-sm">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header" style="width:auto;height: auto;text-align: center;justify-content: center;align-content: center;align-items: center;">
+                        <h4 class="modal-title" id="successtile" style="color:black;">OTP Verfication</h4>
+                    </div>
+                    <br>
+
+                    <form action="forgot_password_otp_verification" name="forgot_password_otp_verification"
+                        method="post">
+                        <div class="form-group row" style="width:auto;height: auto;text-align: center;justify-content: center;align-content: center;align-items: center;padding:10px;">
+                            <div class="col-md-6">
+                                <span id="">Enter OTP</span>
+                            </div>
+                            <div class="col-md-6">
+                                <!-- <input type="hidden" class="form-control" name="mobile_no" id="mobile_no"> -->
+
+                                <input type="text" class="form-control" name="otp" id="otp" required="">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" data-dismiss="modal" onclick="resetForm('otp_generation')"
+                                class="btn btn-danger" value="Cancel">Cancel</button>
+                            <button type="submit" onclick="resetForm('otp_generation')"
+                                class="btn btn-success">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="myModal" role="dialog" data-backdrop="static" data-keyboard="false">
+            <div class="modal-dialog modal-sm">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header" style="width:auto;height: auto;text-align: center;justify-content: center;align-content: center;align-items: center;">
+                        <h4 class="modal-title" id="errorTitle" style="color:black;">Invalid Username or Password
+                            Entered</h4>
+                    </div>
+                    <div class="modal-body">
+                        <center><img src="./images/error.png" height="70" width="70" class="img-fluid"></center>
+                        <br>
+                        <p id="errorText" style="color:red;text-align:center;font-size:13pt"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" style="padding:10px" class="btn btn-danger"
+                            data-dismiss="modal">Ok</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="emptyModal" role="dialog" data-backdrop="static" data-keyboard="false">
+            <div class="modal-dialog modal-sm">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header" style="width:auto;height: auto;text-align: center;justify-content: center;align-content: center;align-items: center;">
+                        <h4 class="modal-title" id="errorTitle" style="color:black;">Please Enter Username and Password
+                        </h4>
+                    </div>
+                    <div class="modal-body">
+                        <center><img src="./images/error.png" height="70" width="70" class="img-fluid"></center>
+                        <br>
+                        <p id="errorText" style="color:red;text-align:center;font-size:13pt"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" style="padding:10px" class="btn btn-danger"
+                            data-dismiss="modal">Ok</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Model -->
+        <div class="modal fade" id="errorDialog" role="dialog" data-backdrop="static" data-keyboard="false">
+            <div class="modal-dialog modal-sm">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header" style="width:auto;height: auto;text-align: center;justify-content: center;align-content: center;align-items: center;">
+                        <h4 class="modal-title" id="errorTitle" style="color:black;">Error</h4>
+                    </div>
+                    <div class="modal-body">
+                        <center><img src="./images/error.png" height="70" width="70" class="img-fluid"></center>
+                        <br>
+                        <p id="errorText" style="color:red;text-align:center;font-size:13pt"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" style="padding:10px" class="btn btn-danger"
+                            data-dismiss="modal">Ok</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+         <div class="modal fade" id="invalidcaptcha" role="dialog" data-backdrop="static" data-keyboard="false">
+            <div class="modal-dialog modal-sm">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header" style="width:auto;height: auto;text-align: center;justify-content: center;align-content: center;align-items: center;">
+                        <h4 class="modal-title" id="errorTitle" style="color:black;">Invalid Captcha</h4>
+                    </div>
+                    <div class="modal-body">
+                        <center><img src="./images/error.png" height="70" width="70" class="img-fluid"></center>
+                        <br>
+                        <p id="errorText" style="color:red;text-align:center;font-size:13pt"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" style="padding:10px" class="btn btn-danger"
+                            data-dismiss="modal">Ok</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="successDialog" role="dialog" data-backdrop="static" data-keyboard="false">
+            <div class="modal-dialog modal-sm">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header" style="width:auto;height: auto;text-align: center;justify-content: center;align-content: center;align-items: center;">
+                        <h4 class="modal-title" id="successtile" style="color:black;">Success</h4>
+                    </div>
+                    <div class="modal-body">
+                        <center><img src="./images/success.png" class="img-fluid"></center>
+                        <br>
+                        <p id="successText" style="color:green;text-align:center;font-size:13pt"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" style="padding:10px" class="btn btn-success"
+                            data-dismiss="modal">Ok</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="OTPVerifyDialog" role="dialog" data-backdrop="static" data-keyboard="false">
+            <div class="modal-dialog modal-sm">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header" style="width:auto;height: auto;text-align: center;justify-content: center;align-content: center;align-items: center;">
+                        <h4 class="modal-title" id="OTPtitle" style="color:black;">Success</h4>
+                    </div>
+                    <div class="modal-body">
+                        <center><img src="./images/success.png" class="img-fluid" ></center>
+                        <br>
+                        <p id="OTPText" style="color:green;text-align:center;font-size:13pt"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" id="OTP_Verify" style="padding:10px" class="btn btn-success"
+                            data-dismiss="modal">Ok</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+      <div class="modal" id="LoadingImage" style="width:100%;height: auto;text-align: center;justify-content: center;align-content: center;align-items: center;display: none;
+         ">
+            <div class="loaderCenter">
+                <img alt="" src="./images/loader.gif" class="img-fluid" />
+            </div>
+        </div>
+
+
+
+
+
+    </section>
+
+    <script type="text/javascript">
+
+
+
+
+        function Captcha() {
+
+            document.getElementById("captcha").innerHTML = "";
+            document.getElementById('incaptcha').value = "";
+            var alpha = new Array('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
+                '1', '2', '3', '4', '5', '6', '7', '8', '9'
+            );
+            var i;
+            for (i = 0; i < 6; i++) {
+                var a = alpha[Math.floor(Math.random() * alpha.length)];
+                var b = alpha[Math.floor(Math.random() * alpha.length)];
+                var c = alpha[Math.floor(Math.random() * alpha.length)];
+                var d = alpha[Math.floor(Math.random() * alpha.length)];
+                var e = alpha[Math.floor(Math.random() * alpha.length)];
+                var f = alpha[Math.floor(Math.random() * alpha.length)];
+                var g = alpha[Math.floor(Math.random() * alpha.length)];
+            }
+            var code = a + ' ' + b + ' ' + ' ' + c + ' ' + d;
+            document.getElementById("captcha").innerHTML = code
+        }
+        function Submitt() {
+            var string1 = removeSpaces(document.getElementById('captcha').innerHTML);
+            var string2 = removeSpaces(document.getElementById('incaptcha').value);
+            var id = (document.getElementById('id').value);
+            var pass = (document.getElementById('pass').value);
+            if (id == '' || pass == '') {
+                $('#emptyModal').modal('show');
+                return false;
+            }
+            else {
+
+                if (string1 == string2) {
+
+                    document.getElementById('formmain').action = "authenticate";
+                    $('#LoadingImage').show();
+                    return true;
+                } else {
+                    $('#invalidcaptcha').modal('show');
+                    Captcha();
+                    return false;
+                }
+            }
+        }
+
+        function removeSpaces(string) {
+            return string.split(' ').join('');
+        }
+
+        function showotp() {
+            $('#verification_form').modal('show');
+        }
+    </script>
+    <script>
+   $(document).ready(function() {
+
+
+$('#otpDialog').modal('hide');
+
+$('#verification_form').modal('hide');
+$('#new_password_form').modal('hide');
+
+
+});
+
+        $(document).ready(function () {
+    <%
+  //console.log("hello Error msg is "+message);
+  if (message === "error") {
+      %>
+                    $('#myModal').modal('show');
+
+      <%} else if (message == "validate") {%>
+                $('#emptyModal').modal('show');
+        <%}
+        %>
+    });
+
+
+        $(function () {
+            $('form[name=forgot_password_otp_generate]').submit(function () {
+                //alert("sdf")
+                $('#LoadingImage').show();
+
+                $.ajax({
+                    type: 'POST',
+                    url: $(this).attr('action'),
+                    data: $(this).serialize(),
+                    dataType: "json",
+                    success: function (resultData) {
+                        $('#LoadingImage').hide();
+                        //console.log("resultdata" + JSON.stringify(resultData));
+                        if (resultData.success == true) {
+                            //console.log('result: ', resultData);
+                            $('#successtile').text('Success');
+                            $('#successText').html(resultData.msg);
+                            $('#successDialog').modal('show');
+                            var login_id = $('#login_id').val();
+                            $('#login_Id').val(login_id);
+                            $('#otpDialog').modal('show');
+                            $('#verification_form').modal('hide');
+
+
+                        } else if (resultData.success == false) {
+                            $('#errorTitle').text('Error');
+                            $('#errorText').html(resultData.msg);
+                            $('#errorDialog').modal('show');
+                            $('#otpDialog').modal('hide');
+                            $('#modal1').modal('hide');
+
+
+                        }
+
+                    },
+                    error: function () {
+                        $('#LoadingImage').hide();
+                        $('#modal1').modal('hide');
+
+                        //alert("Something went wrong");
+                        $('#errorTitle').text('Error');
+                        $('#planMsg').html("Internal Server Error");
+                        $('#errorDialog').modal('show');
+                    }
+                });
+                return false;
+            });
+        });
+
+
+
+        $(function () {
+            $('form[name=forgot_password_otp_verification]').submit(function () {
+                //alert("sdf")
+                $('#LoadingImage').show();
+
+                $.ajax({
+                    type: 'POST',
+                    url: $(this).attr('action'),
+                    data: $(this).serialize(),
+                    dataType: "json",
+                    success: function (resultData) {
+                        $('#LoadingImage').hide();
+                        //console.log("resultdata" + JSON.stringify(resultData));
+                        if (resultData.success == true) {
+                            //console.log('result: ', resultData);
+                            $('#OTPtitle').text('Success');
+                            $('#OTPText').html(resultData.msg);
+                            $('#OTPVerifyDialog').modal('show');
+                            $('#otpDialog').modal('hide');
+
+                            $('#verification_form').modal('hide');
+
+                        } else if (resultData.success == false) {
+                            $('#errorTitle').text('Error');
+                            $('#errorText').html(resultData.msg);
+                            $('#errorDialog').modal('show');
+
+
+                        }
+
+                    },
+                    error: function () {
+                        $('#LoadingImage').hide();
+                        $('#modal1').modal('hide');
+
+                        //alert("Something went wrong");
+                        $('#errorTitle').text('Error');
+                        $('#planMsg').html("Internal Server Error");
+                        $('#errorDialog').modal('show');
+                    }
+                });
+                return false;
+            });
+        });
+
+        $('#OTP_Verify').click(function () {
+            $('#new_password_form').modal('show');
+
+        });
+
+
+
+        $(function () {
+            $('form[name=forgot_password_set_password]').submit(function () {
+                //alert("sdf")
+                $('#LoadingImage').show();
+
+                $.ajax({
+                    type: 'POST',
+                    url: $(this).attr('action'),
+                    data: $(this).serialize(),
+                    dataType: "json",
+                    success: function (resultData) {
+                        $('#LoadingImage').hide();
+                        //console.log("resultdata" + JSON.stringify(resultData));
+                        if (resultData.success == true) {
+                            //console.log('result: ', resultData);
+                            $('#successtile').text('Success');
+                            $('#successText').html(resultData.msg);
+                            $('#successDialog').modal('show');
+                            $('#otpDialog').modal('hide');
+
+                            $('#verification_form').modal('hide');
+                            $('#new_password_form').modal('hide');
+
+                        } else if (resultData.success == false) {
+                            $('#errorTitle').text('Error');
+                            $('#errorText').html(resultData.msg);
+                            $('#errorDialog').modal('show');
+                            $('#otpDialog').modal('hide');
+                            $('#new_password_form').modal('hide');
+                            $('#verification_form').modal('hide');
+
+
+                        }
+
+                    },
+                    error: function () {
+                        $('#LoadingImage').hide();
+                        $('#modal1').modal('hide');
+
+                        //alert("Something went wrong");
+                        $('#errorTitle').text('Error');
+                        $('#planMsg').html("Internal Server Error");
+                        $('#errorDialog').modal('show');
+                    }
+                });
+                return false;
+            });
+        });
+
+
+
+
+
+    </script>
+
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
+<!-- http://api-solapur.brds.co.in:18000/ -->
